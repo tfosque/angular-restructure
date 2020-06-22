@@ -27,7 +27,7 @@ export class ApiService {
   private apiUrl = 'https://my.api.mockaroo.com/shopping_cart.json?key=c1a35bd0';
 
   constructor(
-    public http: HttpClient
+    private http: HttpClient
   ) { }
 
   getProducts() {
