@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,11 @@ import { CalloutComponent } from './callout/callout/callout.component';
 
 import { CalloutService } from './services/callout.service';
 import { AppSearchComponent } from './app-search/app-search.component';
+import { SplashScreenComponent } from './splash/splash-screen/splash-screen.component';
+import { QuanitySelectorComponent } from './quanity-selector/quanity-selector.component';
+import { LineItemComponent } from './line-item/line-item/line-item.component';
+import { LoaderComponent } from './loader/loader/loader.component';
+import { CustomImageComponent } from './custom-image/custom-image/custom-image.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +24,17 @@ import { AppSearchComponent } from './app-search/app-search.component';
     NavComponent,
     CardComponent,
     CalloutComponent,
-    AppSearchComponent
+    AppSearchComponent,
+    SplashScreenComponent,
+    QuanitySelectorComponent,
+    LineItemComponent,
+    LoaderComponent,
+    CustomImageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [CalloutService],
   bootstrap: [AppComponent]

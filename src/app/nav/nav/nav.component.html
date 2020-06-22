@@ -1,4 +1,4 @@
-<div class="grid-x">
+<div class="grid-x" id="nav-container">
 
   <!-- Main Menu -->
   <div class="cell top-bar">
@@ -14,17 +14,13 @@
         <app-app-search></app-app-search>
       </li>
     </ul>
-
   </div>
 
   <!-- Menu Level 2 -->
   <div class="cell grid-x grid-padding-y grid-padding-x" style="background-color: #1779ba;">
     <ul class="menu cell medium-12 grid-x">
       <li class="cell medium-6">
-        <img _ngcontent-beacon-app-c22=""
-          width="224"
-          src="../../../assets//beacon-logo-new.png" alt="Home"
-          />
+        <img _ngcontent-beacon-app-c22="" width="180" src="../../../assets//beacon-logo-new.png" alt="Home" />
       </li>
       <li class="cell medium-6" style="align-self: center">
         <ul id="main-menu" class="menu align-right">
@@ -33,41 +29,48 @@
           <li><a href="#">Cart</a></li>
         </ul>
       </li>
+      <li class="cell medium-12" style="align-self: center">
+
+      </li>
     </ul>
-
   </div>
+  <ul id="main-menu" class="cell menu align-right" style="background-color: #323640;">
+    <li><a href="#">My Account</a></li>
+    <li><a href="#">Pro Tools</a></li>
+  </ul>
 
 
-    <!-- Application Menu -->
-    <div class="grid-x">
-      <!-- Vertical -->
-      <ul class="show-for-small-only vertical menu">
-        <li><a href="">Roofing</a></li>
-        <li><a href="">Siding</a></li>
-        <li><a href="">Gutters</a></li>
-        <li><a href="">Insulation</a></li>
-        <li><a href="">Weatherproffing</a></li>
-        <li><a href="">Tools & Equipment</a></li>
-        <li><a href="">Building Materials</a></li>
-        <li><a href="">Solor Energy</a></li>
-        <li><a href="">Industries</a></li>
-        <li><a href="">Brands</a></li>
-      </ul>
-      <!-- Horizontal -->
-      <ul class="show-for-medium horizontal menu grid-x grid-padding-x align-spaced">
-        <li><a href="">Roofing</a></li>
-        <li><a href="">Siding</a></li>
-        <li><a href="">Gutters</a></li>
-        <li><a href="">Insulation</a></li>
-        <li><a href="">Weatherproffing</a></li>
-        <li><a href="">Tools & Equipment</a></li>
-        <li><a href="">Building Materials</a></li>
-        <li><a href="">Solor Energy</a></li>
-        <li><a href="">Industries</a></li>
-        <li><a href="">Brands</a></li>
-      </ul>
-    </div>
+  <!-- Horizontal -->
+  <div class="grid-x grid-padding-x align-spaced menu-9">
+    <ul class="show-for-medium horizontal menu">
+      <li><a href="">Roofing</a></li>
+      <li><a href="">Siding</a></li>
+      <li><a href="">Gutters</a></li>
+      <li><a href="">Insulation</a></li>
+      <li><a href="">Weatherproffing</a></li>
+      <li><a href="">Tools & Equipment</a></li>
+      <li><a href="">Building Materials</a></li>
+      <li><a href="">Solor Energy</a></li>
+      <li><a href="">Industries</a></li>
+      <li><a href="">Brands</a></li>
+    </ul>
   </div>
-<!--
-  - align-center only on small
--->
+  <app-callout></app-callout>
+</div>
+
+
+<!-- Vertical -->
+<div class="grid-x grid-padding-x align-left menu-9">
+  <ul class="show-for-small-only vertical menu">
+    <li><a href="">Roofing</a></li>
+    <li><a href="">Siding</a></li>
+    <li><a href="">Gutters</a></li>
+    <li><a href="">Insulation</a></li>
+    <li><a href="">Weatherproffing</a></li>
+    <li><a href="">Tools & Equipment</a></li>
+    <li><a href="">Building Materials</a></li>
+    <li><a href="">Solor Energy</a></li>
+    <li><a href="">Industries</a></li>
+    <li><a href="">Brands</a></li>
+  </ul>
+</div>

@@ -1,12 +1,17 @@
-<div class="card">
-  <img src="imgLink">
-  <div class="card-section">
-    <p>This is a simple card with an image.</p>
+<div class="cell">
+  <app-loader [hasLoaded]="hasLoaded"></app-loader>
+</div>
+<div class="cell small-12" *ngFor="let item of data">
+  <div class="card">
+    <div class="card-section">
+      <app-custom-image [src]="item.product.url"></app-custom-image>
+      <div>{{item.product.name}}</div>
+      <div>{{item.product.price | currency}}</div>
+      <div>#{{item.product.item_num}}</div>
+    </div>
   </div>
 </div>
 
 
 
-<!--
-https://images.homedepot-static.com/productImages/3c2925f0-8d7f-4f95-a096-25a663340d93/svn/charcoal-gaf-roof-shingles-0201180-64_300.jpg
- -->
+<!-- <div *ngIf="(data | async)?.length==0">No records found.</div> -->

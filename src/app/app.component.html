@@ -1,4 +1,10 @@
 <!-- Main Navigation Menu -->
 <app-nav></app-nav>
-<app-callout></app-callout>
+
+<!-- Card List -->
+<div class="grid-x grid-padding-x grid-padding-y aligned-center" style="margin: 300px 0px;">
+  <app-card class="cell" [hasLoaded]="hasLoaded" [data]="data"></app-card>
+</div>
+
+<!-- Router -->
 <router-outlet></router-outlet>
