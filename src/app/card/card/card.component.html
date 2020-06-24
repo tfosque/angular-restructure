@@ -1,14 +1,19 @@
+<!-- Loader gif -->
 <div class="cell">
   <app-loader [hasLoaded]="hasLoaded"></app-loader>
 </div>
+<!-- Cart UI -->
 <div>
-  <div class="cell small-12" *ngFor="let item of data | slice:0:10">
+  <div class="cell" *ngFor="let item of data | slice:0:10">
     <div class="card">
       <div class="card-section">
         <app-custom-image [src]="item.product.url"></app-custom-image>
         <div>{{item.product.name}}</div>
         <div>{{item.product.price | currency}}</div>
         <div>#{{item.product.item_num}}</div>
+        <div class="float-right">
+          <app-quanity-selector [qty]="item.product.qty"></app-quanity-selector>
+        </div>
       </div>
     </div>
   </div>

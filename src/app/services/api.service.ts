@@ -4,19 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError, BehaviorSubject } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { map, filter, switchMap } from 'rxjs/operators';
-
-export interface Cart {
-  id: number;
-  cart_title: string;
-  product: {
-    name: string;
-    price: string;
-    item_num: string;
-    sale_price: string;
-    url: string;
-    color: string;
-  };
-}
+import { Cart } from '../models/cart.model';
 
 @Injectable({
   providedIn: 'root'
@@ -34,9 +22,13 @@ export class ApiService {
     const obs = this.http.get<Cart[]>(this.apiUrl);
 
     obs.subscribe((res: Cart[]) => {
-      // console.log({ res });
       this.data.next(res);
     });
     return this.data;
   }
+
+  updateProduct(update: Cart) {
+    const obs = this.http.post<Cart[]>(this.apiUrl, update);
+  }
 }
+

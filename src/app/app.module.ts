@@ -16,6 +16,9 @@ import { QuanitySelectorComponent } from './quanity-selector/quanity-selector.co
 import { LineItemComponent } from './line-item/line-item/line-item.component';
 import { LoaderComponent } from './loader/loader/loader.component';
 import { CustomImageComponent } from './custom-image/custom-image/custom-image.component';
+import { OrderSummaryComponent } from './order-summary/order-summary/order-summary.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ListSearchComponent } from './list-search/list-search.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { CustomImageComponent } from './custom-image/custom-image/custom-image.c
     QuanitySelectorComponent,
     LineItemComponent,
     LoaderComponent,
-    CustomImageComponent
+    CustomImageComponent,
+    OrderSummaryComponent,
+    ShoppingCartComponent,
+    ListSearchComponent
   ],
   imports: [
     BrowserModule,

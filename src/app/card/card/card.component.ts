@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Cart } from '../../services/api.service';
+import { Cart } from '../../models/cart.model';;
 
 @Component({
   selector: 'app-card',
