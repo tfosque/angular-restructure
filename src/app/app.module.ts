@@ -21,6 +21,8 @@ import { CustomImageComponent } from './custom-image/custom-image/custom-image.c
 import { OrderSummaryComponent } from './order-summary/order-summary/order-summary.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ListSearchComponent } from './list-search/list-search.component';
+import { FilterListPipe } from './pipes/filter-list.pipe';
+import { FilterSearchPipe } from './pipes/filter-search.pipe';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { ListSearchComponent } from './list-search/list-search.component';
     CustomImageComponent,
     OrderSummaryComponent,
     ShoppingCartComponent,
-    ListSearchComponent
+    ListSearchComponent,
+    FilterListPipe,
+    FilterSearchPipe
   ],
   imports: [
     BrowserModule,

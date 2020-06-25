@@ -1,11 +1,11 @@
 <!-- Loader gif -->
-<!-- Temp Turned Off -->
-<div class="cell" *ngIf="false">
+<!-- Temp Turned Off * Move Loader to Parent-->
+<div class="cell" *ngIf="!hasLoaded">
   <app-loader [hasLoaded]="hasLoaded"></app-loader>
 </div>
 
 <!-- Cart UI -->
-  <div class="cell" *ngFor="let item of data | slice:0:10">
+  <div class="cell" *ngFor="let item of data | filterSearch:searchT:'name' | slice:0:15">
     <div class="card">
       <div class="card-section">
         <app-custom-image [src]="item.product.url"></app-custom-image>
@@ -18,9 +18,6 @@
       </div>
     </div>
   </div>
-
-
-
-
+  searchT: {{searchT}}
 
 <!-- <div *ngIf="(data | async)?.length==0">No records found.</div> -->

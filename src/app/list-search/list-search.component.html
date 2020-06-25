@@ -7,18 +7,13 @@
     type="search"
     placeholder="Search item"
     required
+    (keyup)="updateTxtInput($event)"
     min-length="6"
   />
   <div *ngIf="searchTxt.invalid" style="font-size: 11pt; color: red;">
     Please enter a least 6 characters
-</div>
+  </div>
 
   <br/>
   <button [disabled]="form.invalid"  class="button" type="submit">Search</button>
 </form>
-
-<div>input: {{form.searchTxt}}</div>
-<div>form valid: {{ searchTxt.valid }}</div>
-<div>f.s.valid {{searchTxt.valid}}</div>
-<div>f.s.invalid {{searchTxt.invalid}}</div>
-{{form.searchTxt.length}}

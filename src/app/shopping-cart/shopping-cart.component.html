@@ -4,13 +4,22 @@
     <img src="https://img.icons8.com/fluent/48/000000/shopping-cart.png"/>
     Shopping Cart
   </h3>
-  <app-list-search class="cell medium-9"></app-list-search>&nbsp;
+
+  <!-- Search Text Input -->
+  <app-list-search
+    class="cell medium-9"
+    (searchT)="getInput($event)"
+  >
+  </app-list-search>&nbsp;
 </div>
 
 <!-- Shipping Cart Page -->
 <div class="grid-x grid-padding-x grid-padding-y aligned-center" style="margin: 0px 0px;">
-
-
-  <app-card class="cell small-12 medium-9" [hasLoaded]="hasLoaded" [data]="data"></app-card>
+  <app-card
+    class="cell small-12 medium-9"
+    [hasLoaded]="hasLoaded"
+    [data]="data"
+    [searchT]="searchT"
+  ></app-card>
   <app-order-summary class="cell small-12 medium-3" [data]="data"></app-order-summary>
 </div>

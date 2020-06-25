@@ -10,7 +10,7 @@ export class CustomImageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.src);
+    // console.log(this.src);
   }
 
 }

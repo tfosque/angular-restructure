@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,10 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./list-search.component.scss']
 })
 export class ListSearchComponent implements OnInit {
+  // @Output() searchText = new EventEmitter();
+  // @Output() searchT: EventEmitter<string> = new EventEmitter();
+  @Output() searchT = new EventEmitter<string>();
+
   form: any = {};
 
   constructor() {
@@ -16,14 +20,17 @@ export class ListSearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  updateTxtInput(input: any) {
+    this.searchT.emit(input.target.value);
+    // console.log('updateTxt:Event:', input.target.value);
+  }
+
   submit(Form: NgForm) {
     console.log('form.value', Form.value);
-    console.log({ Form });
-
-    /* if (Form.invalid){
+    if (Form.invalid){
       return;
-    } */
-    alert('Performing Searach');
+    }
+    alert('Performing Search Filter');
   }
 
 }

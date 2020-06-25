@@ -10,7 +10,7 @@ import { Cart } from '../models/cart.model';
 })
 export class ShoppingCartComponent implements OnInit {
   data: Observable<Cart[]>;
-
+  public searchT = '';
 
   public hasLoaded = false;
 
@@ -19,7 +19,11 @@ export class ShoppingCartComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // this.getProducts();
+   this.getProducts();
+  }
+
+  getInput(input: any) {
+    this.searchT = input;
   }
 
   getProducts() {

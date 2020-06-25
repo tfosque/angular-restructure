@@ -10,11 +10,11 @@ import { Cart } from '../../models/cart.model';;
 export class CardComponent implements OnInit {
  @Input() data: any[];
  @Input() hasLoaded: boolean;
+ @Input() searchT: string;
 
   constructor(
   ) { }
 
   ngOnInit() {
-    console.log(this.hasLoaded);
   }
 }
