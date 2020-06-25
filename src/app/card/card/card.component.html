@@ -10,7 +10,7 @@
         <app-custom-image [src]="item.product.url"></app-custom-image>
         <div>{{item.product.name}}</div>
         <div>{{item.product.price | currency}}</div>
-        <div>#{{item.product.item_num}}</div>
+        <div>#{{item.product.item}}</div>
         <div class="float-right">
           <app-quanity-selector [qty]="item.product.qty"></app-quanity-selector>
         </div>
