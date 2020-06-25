@@ -1,3 +1,24 @@
-<div>
-  <input type="search" name="search" placeholder="Search item" />
+<form #inputSearchTxt="ngForm" name="inputSearchTxt" (ngSubmit)="submit(inputSearchTxt)" novalidate>
+  <input
+    #searchTxt="ngModel"
+    ngModel
+    [(ngModel)]="form.searchTxt"
+    name="searchTxt"
+    type="search"
+    placeholder="Search item"
+    required
+    min-length="6"
+  />
+  <div *ngIf="searchTxt.invalid" style="font-size: 11pt; color: red;">
+    Please enter a least 6 characters
 </div>
+
+  <br/>
+  <button [disabled]="form.invalid"  class="button" type="submit">Search</button>
+</form>
+
+<div>input: {{form.searchTxt}}</div>
+<div>form valid: {{ searchTxt.valid }}</div>
+<div>f.s.valid {{searchTxt.valid}}</div>
+<div>f.s.invalid {{searchTxt.invalid}}</div>
+{{form.searchTxt.length}}

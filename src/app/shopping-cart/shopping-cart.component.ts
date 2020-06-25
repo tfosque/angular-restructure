@@ -19,12 +19,15 @@ export class ShoppingCartComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    // this.getProducts();
+  }
+
+  getProducts() {
     this.api.getProducts()
     .subscribe(res => {
       this.data = res;
       this.hasLoaded = res.length > 0;
       console.log({res});
-
     });
   }
 

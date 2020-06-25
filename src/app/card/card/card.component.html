@@ -1,9 +1,10 @@
 <!-- Loader gif -->
-<div class="cell">
+<!-- Temp Turned Off -->
+<div class="cell" *ngIf="false">
   <app-loader [hasLoaded]="hasLoaded"></app-loader>
 </div>
+
 <!-- Cart UI -->
-<div>
   <div class="cell" *ngFor="let item of data | slice:0:10">
     <div class="card">
       <div class="card-section">
@@ -17,7 +18,7 @@
       </div>
     </div>
   </div>
-</div>
+
 
 
 

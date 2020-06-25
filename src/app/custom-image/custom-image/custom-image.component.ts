@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 @Component({
   selector: 'app-custom-image',
   templateUrl: './custom-image.component.html',
@@ -11,6 +10,7 @@ export class CustomImageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.src);
   }
 
 }
