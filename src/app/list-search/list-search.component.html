@@ -10,8 +10,21 @@
     (keyup)="updateTxtInput($event)"
     min-length="6"
   />
-  <div *ngIf="searchTxt.invalid" style="font-size: 11pt; color: red;">
-    Please enter a least 6 characters
+  <div
+    style="
+      font-size: 11pt;
+      padding: 10px;
+      margin-top: -16px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      background: #e9e5e5e3;"
+      >
+    Filter Search:
+    <span *ngIf="searchTxt.invalid"
+      class="in-valid"
+    >
+        Please enter a least 6 characters
+    </span>
   </div>
 
   <br/>
