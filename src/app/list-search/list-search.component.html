@@ -5,28 +5,10 @@
     [(ngModel)]="form.searchTxt"
     name="searchTxt"
     type="search"
-    placeholder="Search item"
+    placeholder="Type to filter cart"
     required
     (keyup)="updateTxtInput($event)"
-    min-length="6"
+    min-length="1"
   />
-  <div
-    style="
-      font-size: 11pt;
-      padding: 10px;
-      margin-top: -16px;
-      border-bottom-left-radius: 6px;
-      border-bottom-right-radius: 6px;
-      background: #e9e5e5e3;"
-      >
-    Filter Search:
-    <span *ngIf="searchTxt.invalid"
-      class="in-valid"
-    >
-        Please enter a least 6 characters
-    </span>
-  </div>
-
-  <br/>
-  <button [disabled]="form.invalid"  class="button" type="submit">Search</button>
+  <div class="user-info">&nbsp; </div>
 </form>

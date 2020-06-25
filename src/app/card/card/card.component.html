@@ -1,11 +1,11 @@
 <!-- Loader gif -->
 <!-- Temp Turned Off * Move Loader to Parent-->
-<div class="cell" *ngIf="!hasLoaded">
+<div *ngIf="!hasLoaded">
   <app-loader [hasLoaded]="hasLoaded"></app-loader>
 </div>
 
-<!-- Cart UI -->
-  <div class="cell" *ngFor="let item of data | filterSearch:searchT:'name' | slice:0:15">
+<!-- Cart UI Loop over data and filter by 'name' -->
+  <div *ngFor="let item of data | filterSearch:searchT:'name' | slice:0:15">
     <div class="card">
       <div class="card-section">
         <app-custom-image [src]="item.product.url"></app-custom-image>

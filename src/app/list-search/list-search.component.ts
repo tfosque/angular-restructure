@@ -7,8 +7,6 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./list-search.component.scss']
 })
 export class ListSearchComponent implements OnInit {
-  // @Output() searchText = new EventEmitter();
-  // @Output() searchT: EventEmitter<string> = new EventEmitter();
   @Output() searchT = new EventEmitter<string>();
 
   form: any = {};

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { ApiService } from '../services/api.service';
 import { Cart } from '../models/cart.model';
@@ -10,6 +10,8 @@ import { Cart } from '../models/cart.model';
 })
 export class ShoppingCartComponent implements OnInit {
   data: Observable<Cart[]>;
+  @Input() item: any;
+
   public searchT = '';
 
   public hasLoaded = false;
