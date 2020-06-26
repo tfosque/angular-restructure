@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+  public show = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  showVerticalMnu() {
+    this.show = !this.show;
   }
 
 }

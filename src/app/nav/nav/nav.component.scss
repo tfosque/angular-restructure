@@ -13,9 +13,12 @@
 
 .menu-9 {
   background-color: #fff;
-  position: relative;
-  top: 0;
-  z-index: -20;
-  // margin-top: 300px;
   display: block;
+}
+.menu-9-vertical {
+  background-color: #fff;
+  top: 10px;
+  display: block;
+  position: relative;
+  z-index: -20;
 }

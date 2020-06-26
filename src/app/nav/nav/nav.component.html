@@ -1,78 +1,84 @@
-<div class="grid-x" id="container">
+<div style="margin-bottom: 300px">
+  <div class="grid-x" id="container">
 
-  <!-- Main Menu -->
-  <div class="cell top-bar">
-    <ul class="menu align-left">
-      <li><a href="#">Beacon</a></li>
-      <li class="is-active"><a href="#">Beacon Pro+</a></li>
-      <li><a href="#">Beacon 3D+</a></li>
+    <!-- Main Menu -->
+    <div class="cell top-bar">
+      <ul class="menu align-left">
+        <li><a>Beacon</a></li>
+        <li class="is-active"><a>Beacon Pro+</a></li>
+        <li><a>Beacon 3D+</a></li>
+      </ul>
+
+      <!-- Search Menu -->
+      <ul class="menu align-right">
+        <li class="show-for-medium">
+          <app-app-search></app-app-search>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Menu Level 2 -->
+    <div class="cell grid-x grid-padding-y grid-padding-x" style="background-color: #1779ba;">
+      <ul class="menu cell medium-12 grid-x">
+        <li class="cell medium-6">
+          <img _ngcontent-beacon-app-c22="" width="180" src="../../../assets//beacon-logo-new.png" alt="Home" />
+        </li>
+        <li class="cell medium-6" style="align-self: center">
+          <ul id="main-menu" class="menu align-right">
+            <li><a><span>Order History</span> <i class="fi-list"></i></a></li>
+            <li><a>Templates</a></li>
+            <li><a>Cart</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+    <ul id="main-menu" class="cell menu" style="background-color: #323640;">
+      <li><a (click)="showVerticalMnu()"><i class="fi fi-list"></i></a></li>
+      <li><a>My Account</a></li>
+      <li><a>Pro Tools</a></li>
     </ul>
 
-    <!-- Search Menu -->
-    <ul class="menu align-right">
-      <li class="show-for-medium">
-        <app-app-search></app-app-search>
-      </li>
-    </ul>
-  </div>
 
-  <!-- Menu Level 2 -->
-  <div class="cell grid-x grid-padding-y grid-padding-x" style="background-color: #1779ba;">
-    <ul class="menu cell medium-12 grid-x">
-      <li class="cell medium-6">
-        <img _ngcontent-beacon-app-c22="" width="180" src="../../../assets//beacon-logo-new.png" alt="Home" />
-      </li>
-      <li class="cell medium-6" style="align-self: center">
-        <ul id="main-menu" class="menu align-right">
-          <li><a href="#"><span>Order History</span> <i class="fi-list"></i></a></li>
-          <li><a href="#">Templates</a></li>
-          <li><a href="#">Cart</a></li>
+    <!-- Horizontal -->
+    <div class="grid-x grid-padding-x align-spaced menu-9">
+      <ul class="show-for-medium horizontal menu">
+        <li><a>Roofing</a></li>
+        <li><a>Siding</a></li>
+        <li><a>Gutters</a></li>
+        <li><a>Insulation</a></li>
+        <li><a>Weatherproffing</a></li>
+        <li><a>Tools & Equipment</a></li>
+        <li><a>Building Materials</a></li>
+        <li><a>Solor Energy</a></li>
+        <li><a>Industries</a></li>
+        <li><a>Brands</a></li>
+      </ul>
+    </div>
+
+    <!-- Application Callouts flow thru the menu for positioning -->
+    <app-callout></app-callout>
+
+    <!-- Vertical -->
+    <div *ngIf="show">
+      <div class="show-for-small-only grid-x grid-padding-x align-left menu-9-vertical" style="height: 100vh">
+        <ul class="vertical menu">
+          <li><a>Roofing</a></li>
+          <li><a>Siding</a></li>
+          <li><a>Gutters</a></li>
+          <li><a>Insulation</a></li>
+          <li><a>Weatherproffing</a></li>
+          <li><a>Tools & Equipment</a></li>
+          <li><a>Building Materials</a></li>
+          <li><a>Solor Energy</a></li>
+          <li><a>Industries</a></li>
+          <li><a>Brands</a></li>
         </ul>
-      </li>
-      <li class="cell medium-12" style="align-self: center">
-
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
-  <ul id="main-menu" class="cell menu align-right" style="background-color: #323640;">
-    <li><a href="#">My Account</a></li>
-    <li><a href="#">Pro Tools</a></li>
-  </ul>
 
 
-  <!-- Horizontal -->
-  <div class="grid-x grid-padding-x align-spaced menu-9">
-    <ul class="show-for-medium horizontal menu">
-      <li><a href="">Roofing</a></li>
-      <li><a href="">Siding</a></li>
-      <li><a href="">Gutters</a></li>
-      <li><a href="">Insulation</a></li>
-      <li><a href="">Weatherproffing</a></li>
-      <li><a href="">Tools & Equipment</a></li>
-      <li><a href="">Building Materials</a></li>
-      <li><a href="">Solor Energy</a></li>
-      <li><a href="">Industries</a></li>
-      <li><a href="">Brands</a></li>
-    </ul>
-  </div>
-  <app-callout></app-callout>
-</div>
 
 
-<!-- Vertical -->
-<div style="margin-top: 300px">
-  <div class="grid-x grid-padding-x align-left menu-9">
-    <ul class="show-for-small-only vertical menu">
-      <li><a href="">Roofing</a></li>
-      <li><a href="">Siding</a></li>
-      <li><a href="">Gutters</a></li>
-      <li><a href="">Insulation</a></li>
-      <li><a href="">Weatherproffing</a></li>
-      <li><a href="">Tools & Equipment</a></li>
-      <li><a href="">Building Materials</a></li>
-      <li><a href="">Solor Energy</a></li>
-      <li><a href="">Industries</a></li>
-      <li><a href="">Brands</a></li>
-    </ul>
-  </div>
 </div>
