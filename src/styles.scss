@@ -6,3 +6,10 @@
 @import '~motion-ui/motion-ui';
 @include motion-ui-transitions;
 @include motion-ui-animations;/* You can add global styles to this file, and also import other style files */
+
+
+.h3 {text-transform: uppercase;
+  font-size: 2.25rem;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
