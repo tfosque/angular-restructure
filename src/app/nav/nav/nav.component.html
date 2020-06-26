@@ -24,20 +24,24 @@
           <img _ngcontent-beacon-app-c22="" width="180" src="../../../assets//beacon-logo-new.png" alt="Home" />
         </li>
         <li class="cell medium-6" style="align-self: center">
-          <ul id="main-menu" class="menu align-right">
-            <li><a><span>Order History</span> <i class="fi-list"></i></a></li>
+          <ul class="menu align-right menu-3">
+            <li><a><span>Order History</span></a></li>
             <li><a>Templates</a></li>
             <li><a>Cart</a></li>
           </ul>
         </li>
-
       </ul>
     </div>
-    <ul id="main-menu" class="cell menu" style="background-color: #323640;">
-      <li><a (click)="showVerticalMnu()"><i class="fi fi-list"></i></a></li>
-      <li><a>My Account</a></li>
-      <li><a>Pro Tools</a></li>
+
+    <!-- Menu -->
+    <ul class="grid-x menu menu-3" style="background-color: #323640;">
+      <li class="cell small-1 show-for-small-only"><a (click)="showVerticalMnu()"><i class="fi fi-list"></i></a></li>
+      <li class="cell small-4 medium-9"><!-- spacer --></li>
+
+      <li class="flex-child-shrink"><a>My Account</a></li>
+      <li class="flex-child-shrink"><a>Pro Tools</a></li>
     </ul>
+
 
 
     <!-- Horizontal -->
@@ -60,7 +64,7 @@
     <app-callout></app-callout>
 
     <!-- Vertical -->
-    <div *ngIf="show">
+    <ng-container *ngIf="show">
       <div class="show-for-small-only grid-x grid-padding-x align-left menu-9-vertical" style="height: 100vh">
         <ul class="vertical menu">
           <li><a>Roofing</a></li>
@@ -75,10 +79,6 @@
           <li><a>Brands</a></li>
         </ul>
       </div>
-    </div>
+    </ng-container>
   </div>
-
-
-
-
 </div>
